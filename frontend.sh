@@ -11,7 +11,7 @@ echo -e "\e[33m curl nginx \e[0m"
 echo -e "\e[33m unzip nginx \e[0m"
   cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
-  cp Roboshop.conf /etc/nginx/default.d/roboshop.conf
+  cp /root/shell-scripting/Roboshop.conf /etc/nginx/default.d/roboshop.conf
 echo -e "\e[33m restartnginx nginx \e[0m"
   systemctl restart nginx
 
