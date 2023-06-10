@@ -1,4 +1,3 @@
-echo -e "\e[33m installing catalogue \e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e "\e[33m installing catalogue \e[0m"
 yum install nodejs -y
@@ -13,10 +12,12 @@ unzip /tmp/catalogue.zip
 echo -e "\e[33m nmp catalogue \e[0m"
 cd /app
 npm install
+cp /root/shell-scripting/catalogue.service /etc/systemd/system/catalogue.service
+
 echo -e "\e[33m reload catalogue \e[0m"
 systemctl enable catalogue
 systemctl daemon-reload
-echo -e "\e[33m enable catalogue \e[0m
+echo -e "\e[33m enable catalogue \e[0m"
 systemctl restart catalogue
-echo -e "\e[33m enable catalogue \e[0m
+echo -e "\e[33m enable catalogue \e[0m"
 yum install mongodb-org-shell -y
